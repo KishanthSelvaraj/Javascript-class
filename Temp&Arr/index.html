@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template literal and Array</title>
+</head>
+
+<body>
+    <script>
+        /*
+        push()
+        unshift()
+        pop()
+        shift()
+        reverse()
+        sort()
+        spread operator ( ...arr)
+
+        */
+        let a = "kish*an*th"
+        let b = "gavaskar"
+        console.log(a + " " + b + " lives in chennai")
+        console.log(`${a} ${b} live in chennai`);
+
+        let array = [2, 6, 3, 19, 6, 5]
+        let array2 = [10, 20, 30, 40, 50]
+        let str = ['apple', 'banana']
+        // console.log(array.unshift(8));
+        // console.log(array.push(6));
+        // console.log(array)
+
+        // console.log(array.pop());
+        // console.log(array)
+
+        // console.log(array.shift(8));
+
+        //spread operator
+        let newarr = [...array, ...array2, ...str]
+        console.log(newarr)
+    let c = "hi i am kishanth"
+
+    // console.log(str.join().split(""));
+
+        // console.log([array + array2].length)
+
+    </script>
+</body>
+
+</html>
