@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>DOM Converter</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <h2>Celsius to Fahrenheit</h2>
+        <div class="inputdiv">
+            <input type="text" id="input" placeholder="Enter the Celsius">
+        </div>
+        <div>
+            <button type="submit" onclick="res()">Convert to Fahrenheit</button>
+        </div>
+        <div id="result">
+
+        </div>
+    </div>
+    <script>
+
+        function res() {
+
+            let cval = Number(document.getElementById("input").value)
+            let fval = (9 / 5) * cval + 32
+            let result = document.getElementById("result")
+            result.innerHTML = fval.toFixed(3) + " fahrenheit"
+            
+        }
+
+        //functions---------------------------
+        // let add = function () {
+        //     let a = 2 + 5
+        //     console.log(a);
+        // }
+
+        // add()
+        // console.log("hello");
+        //DOM--------------------------------
+        // let a = 4
+        // let div = document.getElementById("wrapper")
+        // div.innerHTML = a + " is the number"
+    </script>
+</body>
+
+</html>
