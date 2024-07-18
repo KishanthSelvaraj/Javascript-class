@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Grade Calculator</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <h2>Grade Calculator</h2>
+        <div class="inputdiv">
+            <input type="text" id="input" placeholder="Enter the Mark">
+        </div>
+        <div>
+            <button type="submit" onclick="grade()">Convert to Grade</button>
+        </div>
+        <div id="result">
+
+        </div>
+        <script>
+
+            function grade() {
+
+                const mark = Number(document.getElementById("input").value)
+
+                let grade = ""
+
+                if (mark >= 90) {
+                    grade = "O"
+                }
+                else if (mark >= 70 && mark < 90) {
+                    console.log("A Grade");
+                    grade = "A"
+                }
+                else if (mark > 50 && mark < 70) {
+                    console.log("B Grade");
+                    grade = "B"
+                }
+                else if (mark == 50) {
+                    console.log("C Grade");
+                    grade = "C"
+                }
+                else {
+                    console.log("RA ");
+                    grade = "RA"
+                }
+
+                let result = document.getElementById("result")
+                result.innerHTML = `You got ${grade} Grade`
+
+
+            }
+
+
+
+
+
+
+            // let mark = 50
+            // if else
+            // if (mark >= 50) {
+            //     console.log("Pass");
+            // }
+            // else {
+            //     console.log("fail");
+            // }
+            // if ladder
+            // let age = 18
+
+            // if (age > 18) {
+            //     console.log("Eligible");
+            // }
+            // else if (age == 18) {
+            //     console.log("Apply");
+            // }
+            // else {
+            //     console.log("Not Eligible");
+            // }
+        </script>
+</body>
+
+</html>
