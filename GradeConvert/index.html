@@ -53,10 +53,25 @@
                 result.innerHTML = `You got ${grade} Grade`
 
 
+
+                switch (grade) {
+                    case 'O':
+                        result.innerHTML = 'Excellent you got O grade';
+                        break;
+                    case 'A':
+                        result.innerHTML = 'Very Good you got A grade';
+                        break;
+                    case 'B':
+                        result.innerHTML = 'Good you got B grade';
+                        break;
+                    case 'C':
+                        result.innerHTML = 'Average you got C grade';
+                        break;
+                    default:
+                        result.innerHTML = 'You got Arrear try to get a pass mark';
+                }
+
             }
-
-
-
 
 
 
