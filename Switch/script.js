@@ -20,7 +20,7 @@ const button = document.querySelector("button")
 let resultdiv = document.createElement('div')
 resultdiv.id='result'
 
-document.getElementById("wrapper").appendChild(resultdiv)
+document.getElementById("wrapper").appendChild (resultdiv)
 
 button.addEventListener('click',stats)
 function stats(){
