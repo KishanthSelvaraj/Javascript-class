@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+
+<body>
+
+    <script>
+
+        //function declaration
+        function positive(num) {//parameters
+            // console.log(num>0);
+            return num > 0
+        }
+        console.log(positive(-4));//arguments
+
+        function hello() {
+            console.log("hello");
+        }
+        hello()
+
+        //hoisting
+        console.log(add(2, 6));
+        function add(a, b) {
+            return a + b
+        }
+
+        console.log(typeof add);
+        // default parameter
+        function name(name = "there") {
+            console.log("Hello", name);
+        }
+        name()
+
+        //recursion function
+        //5!=5*4*3*2*1
+        //5!=5*4!
+
+        function factorial(n) {
+            if (n == 1) {
+                return 1
+            }
+            return n * factorial(n - 1)
+        }
+        console.log(factorial(7));
+
+
+        //function expression
+
+        let odd = function (num) {
+            return num % 2 == 0
+        }
+        console.log(odd(7));
+
+
+        let arr = [1, 2, 3, 4, 5, 6, 7]
+        let sumofarr = function (arr) {
+            let sum = 0
+            for (let val of arr) {
+                sum += val
+            }
+            return sum
+        }
+        console.log(sumofarr(arr));
+
+        //Rest parameter
+        let addofarr = function (...args) {
+            let sum = 1
+            console.log(args);
+            for (let val of args) {
+                sum *= val
+            }
+            return sum
+        }
+        console.log(addofarr(1,2,3,4,5));
+    </script>
+</body>
+
+</html>
