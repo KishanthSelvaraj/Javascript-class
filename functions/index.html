@@ -10,6 +10,8 @@
 
 <body>
 
+    <h1></h1>
+
     <script>
 
         //function declaration
@@ -77,7 +79,49 @@
             }
             return sum
         }
-        console.log(addofarr(1,2,3,4,5));
+        console.log(addofarr(1, 2, 3, 4, 5));
+
+        // arrow function
+
+        let volume = function (l, b, h) {
+            return l * b * h
+        }
+
+        console.log(volume(2, 3, 4));
+
+        let vol = (l, b, h) => l * b * h //fat arrow
+        console.log(vol(2, 3, 4));
+
+        let addarr = arr => {
+            let sum = 0
+            for (let val of arr) {
+                sum += val
+            }
+            return sum
+        }
+        console.log(addarr(arr));
+        //callback
+
+        function consol(name) {
+            console.log("Hello", name);
+        }
+
+        // function text(name) {
+        //     const heading = document.querySelector('h1')
+        //     heading.innerHTML = "Hello " + name
+        // }
+
+        function call(callback) {
+            console.log("hii");
+            callback("kishanth")
+        }
+        
+        // call(consol)
+        call(name => {
+            const heading = document.querySelector('h1')
+            heading.innerHTML = "Hello " + name
+        })
+
     </script>
 </body>
 
