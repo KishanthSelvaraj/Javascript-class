@@ -11,7 +11,9 @@
 <body>
 
     <h1></h1>
-
+    <select name="" id="branch">
+        <option value="select">Select</option>
+    </select>
     <script>
 
         //function declaration
@@ -121,8 +123,23 @@
             const heading = document.querySelector('h1')
             heading.innerHTML = "Hello " + name
         })
+    console.clear()
+    let array = ["kishanth", "kavya", "gavaskar"]
 
-    </script>
+    array.forEach(val => {
+        console.log(val.toUpperCase());
+    })
+
+array.forEach(val=>{
+    const opt=document.createElement('option')
+    opt.textContent=val
+    opt.value=val
+    document.getElementById('branch').appendChild(opt)
+})
+
+
+
+ </script>
 </body>
 
 </html>
