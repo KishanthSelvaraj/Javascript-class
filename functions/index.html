@@ -10,136 +10,183 @@
 
 <body>
 
-    <h1></h1>
-    <select name="" id="branch">
-        <option value="select">Select</option>
-    </select>
+
     <script>
 
-        //function declaration
-        function positive(num) {//parameters
-            // console.log(num>0);
-            return num > 0
-        }
-        console.log(positive(-4));//arguments
+        // //function declaration
+        // function positive(num) {//parameters
+        //     // console.log(num>0);
+        //     return num > 0
+        // }
+        // console.log(positive(-4));//arguments
 
-        function hello() {
-            console.log("hello");
-        }
-        hello()
+        // function hello() {
+        //     console.log("hello");
+        // }
+        // hello()
 
-        //hoisting
-        console.log(add(2, 6));
-        function add(a, b) {
-            return a + b
-        }
-
-        console.log(typeof add);
-        // default parameter
-        function name(name = "there") {
-            console.log("Hello", name);
-        }
-        name()
-
-        //recursion function
-        //5!=5*4*3*2*1
-        //5!=5*4!
-
-        function factorial(n) {
-            if (n == 1) {
-                return 1
-            }
-            return n * factorial(n - 1)
-        }
-        console.log(factorial(7));
-
-
-        //function expression
-
-        let odd = function (num) {
-            return num % 2 == 0
-        }
-        console.log(odd(7));
-
-
-        let arr = [1, 2, 3, 4, 5, 6, 7]
-        let sumofarr = function (arr) {
-            let sum = 0
-            for (let val of arr) {
-                sum += val
-            }
-            return sum
-        }
-        console.log(sumofarr(arr));
-
-        //Rest parameter
-        let addofarr = function (...args) {
-            let sum = 1
-            console.log(args);
-            for (let val of args) {
-                sum *= val
-            }
-            return sum
-        }
-        console.log(addofarr(1, 2, 3, 4, 5));
-
-        // arrow function
-
-        let volume = function (l, b, h) {
-            return l * b * h
-        }
-
-        console.log(volume(2, 3, 4));
-
-        let vol = (l, b, h) => l * b * h //fat arrow
-        console.log(vol(2, 3, 4));
-
-        let addarr = arr => {
-            let sum = 0
-            for (let val of arr) {
-                sum += val
-            }
-            return sum
-        }
-        console.log(addarr(arr));
-        //callback
-
-        function consol(name) {
-            console.log("Hello", name);
-        }
-
-        // function text(name) {
-        //     const heading = document.querySelector('h1')
-        //     heading.innerHTML = "Hello " + name
+        // //hoisting
+        // console.log(add(2, 6));
+        // function add(a, b) {
+        //     return a + b
         // }
 
-        function call(callback) {
-            console.log("hii");
-            callback("kishanth")
-        }
-        
-        // call(consol)
-        call(name => {
-            const heading = document.querySelector('h1')
-            heading.innerHTML = "Hello " + name
-        })
-    console.clear()
-    let array = ["kishanth", "kavya", "gavaskar"]
+        // console.log(typeof add);
+        // // default parameter
+        // function name(name = "there") {
+        //     console.log("Hello", name);
+        // }
+        // name()
 
-    array.forEach(val => {
-        console.log(val.toUpperCase());
-    })
+        // //recursion function
+        // //5!=5*4*3*2*1
+        // //5!=5*4!
 
-array.forEach(val=>{
-    const opt=document.createElement('option')
-    opt.textContent=val
-    opt.value=val
-    document.getElementById('branch').appendChild(opt)
-})
+        // function factorial(n) {
+        //     if (n == 1) {
+        //         return 1
+        //     }
+        //     return n * factorial(n - 1)
+        // }
+        // console.log(factorial(7));
 
 
+        // //function expression
 
- </script>
+        // let odd = function (num) {
+        //     return num % 2 == 0
+        // }
+        // console.log(odd(7));
+
+
+        // let arr = [1, 2, 3, 4, 5, 6, 7]
+        // let sumofarr = function (arr) {
+        //     let sum = 0
+        //     for (let val of arr) {
+        //         sum += val
+        //     }
+        //     return sum
+        // }
+        // console.log(sumofarr(arr));
+
+        // //Rest parameter
+        // let addofarr = function (...args) {
+        //     let sum = 1
+        //     console.log(args);
+        //     for (let val of args) {
+        //         sum *= val
+        //     }
+        //     return sum
+        // }
+        // console.log(addofarr(1, 2, 3, 4, 5));
+
+        // // arrow function
+
+        // let volume = function (l, b, h) {
+        //     return l * b * h
+        // }
+
+        // console.log(volume(2, 3, 4));
+
+        // let vol = (l, b, h) => l * b * h //fat arrow
+        // console.log(vol(2, 3, 4));
+
+        // let addarr = arr => {
+        //     let sum = 0
+        //     for (let val of arr) {
+        //         sum += val
+        //     }
+        //     return sum
+        // }
+        // console.log(addarr(arr));
+        // //callback
+
+        // function consol(name) {
+        //     console.log("Hello", name);
+        // }
+
+        // // function text(name) {
+        // //     const heading = document.querySelector('h1')
+        // //     heading.innerHTML = "Hello " + name
+        // // }
+
+        // function call(callback) {
+        //     console.log("hii");
+        //     callback("kishanth")
+        // }
+
+        // // call(consol)
+        // call(name => {
+        //     const heading = document.querySelector('h1')
+        //     heading.innerHTML = "Hello " + name
+        // })
+
+        // let array = ["kishanth", "kavya", "gavaskar"]
+
+        // array.forEach(val => {
+        //     console.log(val.toUpperCase());
+        // })
+
+        // array.forEach(val => {
+        //     const opt = document.createElement('option')
+        //     opt.textContent = val
+        //     opt.value = val
+        //     document.getElementById('branch').appendChild(opt)
+        // })
+        // console.clear()
+
+        //Map
+        let marks = [60, 80, 90]
+
+        let per = marks.map(x => x / 2)
+        console.log(per);
+
+        let users = [//array of objects
+            { name: "kishanth", age: 20 },
+            { name: "gavskar", age: 25 },
+            { name: "kavya", age: 21 }
+        ]
+
+        let name = users.map(x => x.age)
+        console.log(name);
+
+        //filter
+        let numarr = [20, 40, 60, 80, 90, 100, 302, 46]
+
+        let filter = numarr.filter(x => x > 70)
+        console.log(filter);
+
+        //reduce
+        //reduce(function(accumulator, currentValue ,CurrentIndex , Array))
+
+        let total = numarr.reduce((acc, cur) => acc + cur,1000)
+        console.log(total);
+
+        //2 dimentional array
+        let arr2d = [
+            ["a", "b", "c"],
+            ["c", "d", "f"],
+            ["d", "f", "g"],
+        ]
+        console.log(arr2d.flat());
+
+        // {a:1,b:1,c:2,d:2...}
+        let res={'a':1,'b':1}
+        res['c']=2
+        console.log(res['d']);
+        // console.log(res);
+
+        let answer=arr2d.flat().reduce((acc,cur)=>{
+            if(acc[cur]){
+                acc[cur]++
+            }else{
+                acc[cur]=1
+            }
+            // console.log(acc,cur,ind);
+            return acc
+        },{})
+        console.log(answer);
+    </script>
 </body>
 
 </html>
