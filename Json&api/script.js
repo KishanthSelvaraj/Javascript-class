@@ -1,31 +1,48 @@
-let json={
-    "Phone":"OnePlus",
-    "Price":"30,000"
-}
-
-
-let mainjson= [
+let json1 = "Dave";
+let json2 = 4;
+let json3 = true;
+let json4 = [4, 5, 6, 7];
+let json5 = {
+  Stock: "TCS",
+  Price: 3500,
+};
+let json6 = `[
     {
-        "Phone":"OnePlus",
-        "Price":"30,000",
-        "Num":[1,2,3,4,5,6]
+        "Stock":"TCS",
+        "Price":3500
     },
     {
-        "Phone":"Oppo",
-        "Price":"20,000",
-        "Num":[1,2,3,4,5,6]
-
+        "Stock":"HUL",
+        "Price":2500
     },
     {
-        "Phone":"Redmi",
-        "Price":"25,000",
-        "Num":[1,2,3,4,5,6]
+        "Stock":"SBI",
+        "Price":550
     }
-]
-console.log(mainjson[0].Num[0]);
-// let parse = JSON.parse(mainjson)
-// console.log(parse);
-// let string=JSON.stringify(parse)
-// console.log(string);
+]`;
 
+let parsed = JSON.parse(json6);
+// console.log(parsed[1].Price)
+// console.log(JSON.stringify(parsed))
+//https://official-joke-api.appspot.com/jokes/programming/random
 
+// get, post,put,delete
+fetch("https://jsonplaceholder.typicode.com/todos/1")
+  .then((response) => response.json())
+  .then((json) => console.log(json.title))
+  .catch((error) => console.log(error));
+
+fetch("https://jsonplaceholder.typicode.com/todos", {
+  method: "POST",
+  headers: { "content-type": "application/json" },
+  body: JSON.stringify({
+    userId: 11,
+    id: 201,
+    title: "Testing",
+    completed: true,
+  }),
+})
+.then((response) => response.json())
+.then((json) => console.log(json))
+
+fetch('https://official-joke-api.appspot.com/jokes/programming/random')
