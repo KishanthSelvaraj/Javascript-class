@@ -42,7 +42,11 @@ fetch("https://jsonplaceholder.typicode.com/todos", {
     completed: true,
   }),
 })
-.then((response) => response.json())
-.then((json) => console.log(json))
+  .then((response) => response.json())
+  .then((json) => console.log(json));
 
-fetch('https://official-joke-api.appspot.com/jokes/programming/random')
+fetch("https://official-joke-api.appspot.com/jokes/programming/random")
+  .then((response) => response.json())
+  .then((json) =>
+    console.log(`Setup: ${json[0].setup} and Punchline: ${json[0].punchline}`)
+  );
