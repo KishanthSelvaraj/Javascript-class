@@ -22,39 +22,63 @@
 
         </div>
         <script>
-
             function grade() {
-
-                const mark = Number(document.getElementById("input").value)
-
+                let mark = document.getElementById("input").value
                 let grade = ""
-
                 if (mark >= 90) {
                     grade = "O"
-                }
-                else if (mark >= 70 && mark < 90) {
-                    console.log("A Grade");
+                } else if (mark >= 70 && mark < 90) {
                     grade = "A"
-                }
-                else if (mark > 50 && mark < 70) {
-                    console.log("B Grade");
+                } else if (mark > 50 && mark < 70) {
                     grade = "B"
-                }
-                else if (mark == 50) {
-                    console.log("C Grade");
+                } else if (mark === 50) {
                     grade = "C"
-                }
-                else {
-                    console.log("RA ");
+                } else {
                     grade = "RA"
                 }
-
+                console.log(grade);
                 let result = document.getElementById("result")
                 result.innerHTML = `You got ${grade} Grade`
 
 
+            }
 
-                switch (grade) {
+
+        </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+                 switch (grade) {
                     case 'O':
                         result.innerHTML = 'Excellent you got O grade';
                         break;
@@ -69,33 +93,4 @@
                         break;
                     default:
                         result.innerHTML = 'You got Arrear try to get a pass mark';
-                }
-
-            }
-
-
-
-            // let mark = 50
-            // if else
-            // if (mark >= 50) {
-            //     console.log("Pass");
-            // }
-            // else {
-            //     console.log("fail");
-            // }
-            // if ladder
-            // let age = 18
-
-            // if (age > 18) {
-            //     console.log("Eligible");
-            // }
-            // else if (age == 18) {
-            //     console.log("Apply");
-            // }
-            // else {
-            //     console.log("Not Eligible");
-            // }
-        </script>
-</body>
-
-</html>
+                 } -->

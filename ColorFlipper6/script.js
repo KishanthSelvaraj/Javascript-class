@@ -4,26 +4,19 @@ let wrap = document.getElementById("wrap");
 
 const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
 
-btn.addEventListener("click", function () {
+btn.addEventListener("click", Color);
+function Color() {
   let hex = "#";
-  for (let i = 0; i < 6; i++) {
-    hex += randomValue();
+  for (i = 0; i < 6; i++) {
+    hex = hex + randomValue();
   }
-  console.log(hex);
   colortext.innerHTML = hex;
   wrap.style.backgroundColor = hex;
-});
-
-function randomValue() {
-  let randomIndex = Math.floor(Math.random() * 16);
-  return hex[randomIndex];
 }
 
-console.log(randomValue());
-console.log(randomValue());
-console.log(randomValue());
-console.log(randomValue());
-console.log(randomValue());
-console.log(randomValue());
+function randomValue() {
+  let randomValue = Math.floor(Math.random() * 16);
 
-
+  return hex[randomValue];
+}
+console.log(randomValue());

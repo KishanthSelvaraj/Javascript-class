@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //function declaration
+        function positive(a, b) {//parameters
+            console.log(a);
+
+        }
+        positive(8, 4)//arguments
+
+        // function expression
+        let a = 10
+        let odd = function (a) {
+            return a % 2 == 0
+        }
+        console.log(odd(3456788));
+
+        //arrow function 
+        //    let  volume = function(l,b,h){
+        //     return l*b*h
+        //    }
+
+        let vol = (l, b, h) => {
+            return l * b * h
+        }
+        console.log(vol(2, 3, 4));
+        let array = ["kishanth", "Gavaskar", "Kavya", "Sabari"]
+        array.forEach(a => {
+            console.log(a.toUpperCase());
+
+        })
+    </script>
+</body>
+
+</html>
