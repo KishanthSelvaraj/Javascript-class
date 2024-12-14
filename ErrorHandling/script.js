@@ -1,35 +1,24 @@
-// // console.log(test);
+
+// let test 
+
 
 // try {
-//   // let test=10
 //   console.log(test);
 // } catch (err) {
 //   console.log(err.name);
 //   console.log(err.message);
-//   // console.log(err.stack);
 // }finally{
-//   console.log("Done");
-  
+//     console.log("done")
 // }
 
-function zero(input1,input2) {
-  if (isNaN(input1) || isNaN(input2)) {
-    throw new Error("Not a number error");
-  }
-  return input1/input2
-}
-
 try {
-let ans=zero(5,10)
-  if(ans===Infinity)
-    throw new Error("Divided zero error");
- 
+  let b=1;
+  let ans = 5 / b;
+  if(b==0){
+    throw "give the valid num"
+  }
   console.log(ans);
-    
-} catch (error) {
-  console.log(error);
   
-}finally{
-  console.log("Done");
-  
-}
+} catch (err) {
+  console.log(err);
+} 

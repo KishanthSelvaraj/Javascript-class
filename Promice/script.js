@@ -1,62 +1,38 @@
 // function movie() {
 //   return new Promise((resolve, reject) => {
-//     let movie = true;
+//     //success , failure
+//     let movie = false;
 //     if (movie) {
-//       setTimeout(resolve, 2000, 150);
+//       resolve(230);
 //     } else {
 //       reject();
 //     }
 //   });
 // }
-
+// //calling
 // movie()
 //   .then((amt) => console.log("Ticket Booked", amt))
-//   .catch(() => console.log("Ticket not booked"));
+//   .catch(() => console.log("Ticket not Booked"));
 
-// let input1 = new Promise((resolve, reject) => {
-//   const reach = false;
-//   if (reach) {
-//     resolve("Kishanth Reached");
-//   } else {
-//     reject("Kishanth Not Reached");
-//   }
-// });
-
-// let input3 = new Promise((resolve, reject) => {
-//   const reach = true;
-//   if (reach) {
-//     resolve("Siva Reached");
-//   } else {
-//     reject("Siva Not Reached");
-//   }
-// });
-
-// Promise.allSettled([input1, input2, input3])
-//   .then((mes) => console.log(mes))
-//   .catch((error) => console.log(error));
-
-// async function fn(){
-//   return "kishanth"
+// async function fn() {
+//   return "Kishanth";
 // }
-// console.log(fn())
-// fn().then((msg)=>console.log(msg))
+// fn()
+//   .then((name) => console.log(name))
+//   .catch((err) => console.log(err));
 
-let input2 = new Promise((resolve, reject) => {
-  const reach = true;
-  if (reach) {
-    setTimeout(resolve, 2000, "Gavas Reached");
+let input = new Promise((resolve, reject) => {
+  let home = true;
+  if (home) {
+    setTimeout(resolve, 3000, "Kishanth Reached");
   } else {
-    reject("Gavas Not Reached");
+    reject("Kishanth not Reached");
   }
 });
-// input2.then((msg) => console.log(msg)).catch((err) => console.log(err));
-async function asyncstatus() {
-  console.log("hi");
-  res = await input2
-  console.log(res)
-  console.log("done");
-  
-  
+input.then((msg) => console.log(msg)).catch((err) => console.log(err));
+async function syncstatus() {
+  console.log("hello");
+  await input;
+  console.log("Done");
 }
-
-asyncstatus()
+syncstatus();
